@@ -59,25 +59,28 @@ def five_card_draw(card):
   first_card = randint(1, 52)
   already_drawn.append(first_card)
   second_card = randint(1,52)
-  if second_card in already_drawn:
+  
+  while second_card in already_drawn:
     second_card = randint(1,52)
   already_drawn.append(second_card)
   third_card = randint(1, 52)
-  if third_card in already_drawn:
+  
+  while third_card in already_drawn:
     third_card = randint(1, 52)
   already_drawn.append(third_card)
   fourth_card = randint(1, 52)
-  if fourth_card in already_drawn:
+  
+  while fourth_card in already_drawn:
     fourth_card = randint(1, 52)
   already_drawn.append(fourth_card)
   fifth_card = randint(1, 52)
-  if fifth_card in already_drawn:
+  
+  while fifth_card in already_drawn:
     fifth_card = randint(1, 52)
   already_drawn.append(fifth_card)
   return already_drawn
 
 your_hand = five_card_draw(cards)
-#print(your_hand)
 
 for i in your_hand:
   print(cards[i])
